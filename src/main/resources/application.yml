@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo-liquibase-spring-boot
+  datasource:
+    url: jdbc:postgresql://postgresql:5455/test_db
+    username: ${PG_USERNAME:user}
+    password: ${PG_PW:pw}
+  jpa:
+    show-sql: true
+  liquibase:
+    change-log: classpath:liquibase/changelog/db.changelog-root.xml
+server:
+  port: 8081
+
+
